@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Centers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let event of events" (click) = "toCenterInfo()">
+        <img src={{center.img}}/>
+        <div class="card-title">{{center.Name}}</div>
+      </ion-card>
+
+</ion-content>
