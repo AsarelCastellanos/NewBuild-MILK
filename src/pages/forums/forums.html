@@ -1,42 +1,55 @@
 <ion-header>
-
-  <ion-navbar>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button>
+        <img height="30px" width="30px" src="../../assets/imgs/profile.png">
+      </button>
+    </ion-buttons>
     <ion-title>Forums</ion-title>
+    <ion-buttons right>
+      <button ion-button>
+        <img height="25px" width="25px" src="../../assets/imgs/post.png">
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
 
-    <ion-card>
+  <ion-card *ngFor="let text of texts">
 
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="img/marty-avatar.png">
-          </ion-avatar>
-          <h2>Random user</h2>
-        </ion-item>
-      
-        <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-        </ion-card-content>
-      
-        <ion-row>
-          <ion-col>
-            <button ion-button icon-start clear small>
-              <ion-icon name="thumbs-up"></ion-icon>
-              <div>Like</div>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button icon-start clear small>
-              <ion-icon name="text"></ion-icon>
-              <div>Comment</div>
-            </button>
-          </ion-col>
-        </ion-row>
-      
-      </ion-card>
+    <ion-row>
+      <ion-item>
+        <h2 style="margin: 20px;"> Tony Aguilar </h2>
+      </ion-item>
+    </ion-row>
+
+    <p style="margin: 20px;">{{ text.text }}</p>
+
+    <ion-row>
+      <ion-col>
+        <p style="margin: 20px;">Just Now</p>
+      </ion-col>
+      <ion-col center text-center>
+        <div></div>
+        <button ion-button icon-start clear small (click)='likePost(text)' class='btn'>
+          <ion-icon ios="ios-bulb" md="md-bulb" class='btnset'></ion-icon>
+          <div>{{text.likes}} Likes</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <div class="input">
+    <form>
+      <ion-row>
+        <input style="border-style: 0.5px solid; position:relative; border-color:black; border-radius: 50px; width:245px; float: right; padding-right: 10px;"
+          id="post" type="text" placeholder="Say something..." [(ngModel)]="newText" [ngModelOptions]="{standalone:true}">
+        <button style="position:static; padding-left:15px; border-style: 1px solid; border-radius: 50px; background-color: white;"
+          class="input" type="submit" class="postbtn" [value]="btnText" (click)="addPost()">Send</button>
+      </ion-row>
+    </form>
+  </div>
 
 </ion-content>

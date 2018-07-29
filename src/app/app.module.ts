@@ -19,6 +19,9 @@ import { PerformancesPageModule } from '../pages/performances/performances.modul
 import { SocialGatheringsPageModule } from '../pages/social-gatherings/social-gatherings.module';
 import { FestivalsPageModule } from '../pages/festivals/festivals.module';
 import { MakeYourOwnPageModule } from '../pages/make-your-own/make-your-own.module';
+import { HttpModule } from "@angular/http";
+import { EventInfoPage } from '../pages/event-info/event-info';
+import { EventInfoPageModule } from '../pages/event-info/event-info.module';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { MakeYourOwnPageModule } from '../pages/make-your-own/make-your-own.modu
     SocialGatheringsPageModule,
     FestivalsPageModule,
     PerformancesPageModule,
-    MakeYourOwnPageModule
+    MakeYourOwnPageModule,
+    HttpModule,
+    EventInfoPageModule,
+    SocialGatheringsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

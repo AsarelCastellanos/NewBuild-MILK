@@ -1,3 +1,39 @@
 page-event-info {
 
+    ion-title{
+        -webkit-text-fill-color: #c62e2e;
+    }
+
+    .paragraph {
+        -webkit-text-fill-color: #c62e2e;
+    }
+    ion-card {
+        height: 200%;
+        .paragraph {
+        -webkit-text-fill-color: #c62e2e;
+    }
+    }
+
+    .save-events {
+        height: 10%,
+    }
+
+    .card-background-page {
+
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+
+      .card-title {
+        position: absolute;
+        top: 20%;
+        font-size: 5.0em;
+        width: 100%;
+        font-weight: 400;
+        color: #fff;
+      }
+      
+    }
+
 }
