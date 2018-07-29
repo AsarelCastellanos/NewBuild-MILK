@@ -13,7 +13,7 @@ import { Http } from '@angular/http';
 export class EventInfoPage {
   title;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  public http: Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public http: Http, private socialSharing: SocialSharing, private alertCtrl: AlertController) {
     this.title = navParams.data.data;
     console.log(this.title);
   }

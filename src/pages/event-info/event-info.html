@@ -32,16 +32,16 @@
 
       <ion-row no-padding>
         <ion-col text-left>
-          <button (click)="saveEvent()" ion-button clear small color="light">
-            <img class="save-events" src="assets/icon/save-events-icon.png" />
-            <p class="paragraph" style="margin-left:8px">Save</p>
+          <button (click)="regularShare()" ion-button clear small color="light">
+            <ion-icon name="share"></ion-icon>
+            <p class="paragraph" style="margin-left:8px">Share</p>
           </button>
         </ion-col>
 
         <ion-col text-right>
-          <button (click)="regularShare()" ion-button clear small color="light">
-            <img class="save-events" src="assets/icon/sharecustom.png" />
-            <p style="margin-left:8px">Share</p>
+          <button (click)="saveEvent()" ion-button clear small color="light">
+            <ion-icon name="bookmark"></ion-icon>
+            <p class="paragraph" style="margin-left:8px">Save</p>
           </button>
         </ion-col>
       </ion-row>

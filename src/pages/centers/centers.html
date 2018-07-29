@@ -1,17 +1,17 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Centers</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
 
-    <ion-card *ngFor="let event of events" (click) = "toCenterInfo()">
+    <ion-card *ngFor="let center of centers" (click) = "toInfo(center)">
         <img src={{center.img}}/>
-        <div class="card-title">{{center.Name}}</div>
+        <div class="card-title">{{center.centerName}}</div>
       </ion-card>
 
 </ion-content>

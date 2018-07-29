@@ -22,6 +22,9 @@ import { MakeYourOwnPageModule } from '../pages/make-your-own/make-your-own.modu
 import { HttpModule } from "@angular/http";
 import { EventInfoPage } from '../pages/event-info/event-info';
 import { EventInfoPageModule } from '../pages/event-info/event-info.module';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { CenterInfoPage } from '../pages/center-info/center-info';
+import { CenterInfoPageModule } from '../pages/center-info/center-info.module';
 
 
 @NgModule({
@@ -42,7 +45,8 @@ import { EventInfoPageModule } from '../pages/event-info/event-info.module';
     MakeYourOwnPageModule,
     HttpModule,
     EventInfoPageModule,
-    SocialGatheringsPageModule
+    SocialGatheringsPageModule,
+    CenterInfoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -56,6 +60,7 @@ import { EventInfoPageModule } from '../pages/event-info/event-info.module';
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
